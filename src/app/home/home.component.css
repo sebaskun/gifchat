@@ -1,0 +1,52 @@
+
+.home-body {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;   
+}
+
+.main-containter {
+    color: white;
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to left, #eb5d3f, #772bd4);
+    padding: 3px;
+    border-radius: 3%;
+}
+
+.sub-container {
+    background: black;
+    color: white;
+    padding: 2rem;
+  }
+
+.title {
+    font-family: "calibri light";
+    font-size: xxx-large;
+    padding-bottom: 23%;
+}
+
+.enter-button {
+    background-color: Transparent;
+    color: white;
+    padding-left: 35%;
+    padding-right: 35%;
+    border-color: purple;
+    text-align: center;
+    border-radius: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-top: 20%;
+    text-align: center;
+    cursor: pointer;
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.welcome-image {
+    border-radius: 50%;
+}

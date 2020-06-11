@@ -1,0 +1,35 @@
+<body class="chat-body">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <div class="main-container">
+        <ul *ngFor="let message of chatLog" class="message-ul">
+                <li class="me the-gif-li" *ngIf="message.gif"><img class="gif-img" src="{{message.gif}}" alt=""></li>
+                <li class="him" *ngIf="message.text && message.who=='friend'">{{message.text}}</li>
+                <li class="me" *ngIf="message.text && message.who=='me'">{{message.text}}</li>
+        </ul>
+
+        <div class="chat-box">
+            <button class="ripple" (click)="openPopUp()">GIF</button>
+            <input type="text" [(ngModel)]="myMessage" (keyup.enter)=sendMessage() class="message-input">
+            <button class="ripple" (click)="sendMessage()"><i class="fa fa-paper-plane"></i></button>
+        </div>
+        <div>
+        </div>
+    </div>
+    
+    <!-- <div *ngIf="showPopUp" class="popup">
+        <input type="text" [(ngModel)]="gifSearchKeyword" (ngModelChange)="gifSearch(gifSearchKeyword)" class="gif-search">
+        <ul *ngFor="let gif of gifsToShow">
+        <li (click)="sendGif(gif.images.fixed_height_downsampled.url)"><img src="{{gif.images.fixed_height_downsampled.url}}" alt=""></li> 
+        </ul>
+    </div> -->
+
+    <div *ngIf="showPopUp" class="popup">
+        <input type="text" [(ngModel)]="gifSearchKeyword" (ngModelChange)="gifSearch(gifSearchKeyword)" class="gif-search">
+        <ul  class="gif-search-row">
+            <li *ngFor="let gif of gifsToShow" class="gif-search-element" (click)="sendGif(gif.images.fixed_height_downsampled.url)">
+                <img class="gif-image" src="{{gif.images.fixed_height_downsampled.url}}" alt="">
+            </li> 
+        </ul>
+    </div>
+
+</body>

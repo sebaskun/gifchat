@@ -1,5 +1,8 @@
 # Gifchat
 
+## Introduction
+Hello! this is a chat where you can share gifs and other fun stuff!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
